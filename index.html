@@ -48,7 +48,7 @@
 
 
                         <li class="nav-item">
-                            <a class="nav-link active" href="#home">
+                            <a class="nav-link" href="#home">
                                 Home
                             </a>
                         </li>
@@ -80,14 +80,6 @@
 
 
                         <li class="nav-item">
-                            <a class="nav-link" href="#management">
-                                Management
-                            </a>
-                        </li>
-
-
-
-                        <li class="nav-item">
                             <a class="nav-link" href="#gallery">
                                 Gallery
                             </a>
@@ -100,6 +92,24 @@
                                 Contact
                             </a>
                         </li>
+
+
+
+                        <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" href="#" id="otherDropdown"
+       role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        Other
+    </a>
+
+    <ul class="dropdown-menu" aria-labelledby="otherDropdown">
+        <li><a class="dropdown-item" href="underconstruction.html">Youth</a></li>
+        <li><a class="dropdown-item" href="underconstruction.html">Choir</a></li>
+        <li><a class="dropdown-item" href="underconstruction.html">Sunday School</a></li>
+        <li><a class="dropdown-item" href="underconstruction.html">Prayer Group</a></li>
+        <li><a class="dropdown-item" href="underconstruction.html">MGOCSM</a></li>
+    </ul>
+</li>
+
 
 
 
@@ -295,6 +305,95 @@
             </div>
 
         </section>
+
+
+
+        <section class="quick-access-section">
+
+    <div class="container">
+
+        <div class="row g-4 justify-content-center">
+
+            <div class="col-6 col-md-3">
+
+                <a href="#worship" class="quick-access-card">
+
+                    <div class="quick-access-icon">
+                        🙏
+                    </div>
+
+                    <h5>Worship</h5>
+
+                    <p>
+                        Prayer & Services
+                    </p>
+
+                </a>
+
+            </div>
+
+
+            <div class="col-6 col-md-3">
+
+                <a href="#important-dates" class="quick-access-card">
+
+                    <div class="quick-access-icon">
+                        📅
+                    </div>
+
+                    <h5>Events</h5>
+
+                    <p>
+                        Upcoming Events
+                    </p>
+
+                </a>
+
+            </div>
+
+
+            <div class="col-6 col-md-3">
+
+                <a href="#announcements" class="quick-access-card">
+
+                    <div class="quick-access-icon">
+                        📢
+                    </div>
+
+                    <h5>Announcements</h5>
+
+                    <p>
+                        Latest Updates
+                    </p>
+
+                </a>
+
+            </div>
+
+
+            <div class="col-6 col-md-3">
+
+                <a href="#contact" class="quick-access-card">
+
+                    <div class="quick-access-icon">
+                        📍
+                    </div>
+
+                    <h5>Visit Us</h5>
+
+                    <p>
+                        Find Our Church
+                    </p>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
 
 
 
@@ -984,7 +1083,7 @@
             <!-- Vicar -->
             <div class="col-md-6 col-lg-3">
 
-                <div class="committee-card">
+                <div class="committee-card" id="vicar">
 
                     <div class="committee-image"
                         data-bs-toggle="modal"
@@ -1010,7 +1109,7 @@
             <!-- Secretary -->
             <div class="col-md-6 col-lg-3">
 
-                <div class="committee-card">
+                <div class="committee-card" id="secretary">
 
                     <div class="committee-image"
                         data-bs-toggle="modal"
@@ -1036,7 +1135,7 @@
             <!-- Treasurer -->
             <div class="col-md-6 col-lg-3">
 
-                <div class="committee-card">
+                <div class="committee-card" id="treasurer">
 
                     <div class="committee-image"
                         data-bs-toggle="modal"
@@ -1062,7 +1161,7 @@
             <!-- Committee Members -->
             <div class="col-md-6 col-lg-3">
 
-                <div class="committee-card">
+                <div class="committee-card" id="committee-members">
 
                     <div class="committee-image"
                         data-bs-toggle="modal"
@@ -1829,7 +1928,8 @@
 
 });
 
-    </script>
+
+</script>
 
     
 <!-- Vicar Modal -->

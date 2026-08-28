@@ -134,13 +134,24 @@ section .py-5 {
     transition: 0.3s;
 }
 
+.church-navbar .nav-link.active::after,
+.church-navbar .dropdown-toggle.active::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: #f4c542;
+}
+
 .church-navbar .nav-link:hover::after,
 .church-navbar .nav-link.active::after {
     width: 100%;
 }
 
 .church-donate-btn {
-    background-color: #F4C542;
+
     color: #092B54;
     font-weight: 600;
     padding: 9px 18px;
@@ -3765,45 +3776,19 @@ img {
 }
 
 .transparent-navbar {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
     width: auto;
     z-index: 1000;
 
-    background: transparent !important;
+    background-color: #F5EFE3 !important;
+    background-image: none !important;
     box-shadow: none !important;
 
-    transition: all 0.4s ease;
-}
-
-
-.transparent-navbar.scrolled {
-    position: fixed;
-
-    background: #6b1f2a !important;
-
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
-
-    transition: all 0.4s ease;
-}
-
-.transparent-navbar {
-    background-color: transparent !important;
     transition: background-color 0.4s ease,
                 box-shadow 0.4s ease;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    width: auto; 
-    z-index: 1000;
-}
-
-.transparent-navbar.scrolled {
-    background-color: #6b1f2a !important;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
 }
 
 
@@ -3987,36 +3972,30 @@ body {
 }
 
 
-/* Remove border from Vicar Message section */
 .vicar-section {
     border: none !important;
 }
 
-/* Remove border from Vicar image */
 .vicar-image {
     border: none !important;
     box-shadow: none !important;
 }
 
-/* Remove border from Vicar image itself */
 .vicar-image img {
     border: none !important;
     box-shadow: none !important;
 }
 
-/* Remove border from Vicar content */
 .vicar-section .col-lg-7 {
     border: none !important;
     box-shadow: none !important;
 }
-
 
 .vicar-image {
     border: none;
     box-shadow: none;
     background: transparent;
 }
-
 
 .vicar-image img {
     border: none !important;
@@ -4025,7 +4004,6 @@ body {
     border-radius: 0 !important;
 }
 
-
 .vicar-image {
     border: none !important;
     box-shadow: none !important;
@@ -4037,7 +4015,6 @@ body {
     box-shadow: none !important;
     outline: none !important;
 }
-
 
 .vicar-image {
     border: 0 !important;
@@ -4056,13 +4033,11 @@ body {
     padding: 0 !important;
 }
 
-
 .vicar-image img.img-fluid {
     border: none !important;
     box-shadow: none !important;
     outline: none !important;
 }
-
 
 .vicar-section,
 .vicar-section .container,
@@ -4075,7 +4050,6 @@ body {
     outline: none !important;
     box-shadow: none !important;
 }
-
 
 .vicar-section,
 .vicar-section .container,
@@ -4426,8 +4400,6 @@ section#donate.donate-section:hover {
     transform: none !important;
 }
 
-
-
 .committee-card {
     text-align: center;
 }
@@ -4690,30 +4662,24 @@ header .navbar {
     transition: background-color 0.4s ease;
 }
 
-/* Slide 1 navbar text */
 .transparent-navbar .navbar-brand,
 .transparent-navbar .nav-link {
     color: #800020 !important;
 }
 
-/* Slide 1 Donate button */
 .transparent-navbar .church-donate-btn {
     color: #800020 !important;
 }
 
-
-/* Slide 2 & Slide 3 - Maroon */
 .transparent-navbar.maroon-navbar {
     background-color: #800020 !important;
 }
 
-/* White text on maroon */
 .transparent-navbar.maroon-navbar .navbar-brand,
 .transparent-navbar.maroon-navbar .nav-link {
     color: #ffffff !important;
 }
 
-/* Donate button on maroon */
 .transparent-navbar.maroon-navbar .church-donate-btn {
     color: #ffffff !important;
 }
@@ -4906,3 +4872,276 @@ nav.transparent-navbar.maroon-navbar .church-donate-btn {
     background-color: #240B05 !important;
 }
 
+.church-navbar .dropdown-menu {
+    border: none;
+    border-radius: 10px;
+    padding: 8px 0;
+    min-width: 190px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.church-navbar .dropdown-item {
+    padding: 10px 18px;
+    font-size: 15px;
+    color: #240B05;
+    transition: all 0.3s ease;
+}
+
+.church-navbar .dropdown-item:hover {
+    background-color: #240B05;
+    color: white;
+}
+
+.church-navbar .dropdown-toggle::after {
+    margin-left: 6px;
+}
+
+#vicar,
+#secretary,
+#treasurer,
+#committee-members {
+    scroll-margin-top: 100px;
+}
+
+.church-navbar.scrolled {
+    background-color: #240B05 !important;
+}
+
+.transparent-navbar.scrolled {
+    background-color: #240B05 !important;
+}
+
+.church-navbar.transparent-navbar {
+    background-color: transparent !important;
+    transition: background-color 0.3s ease;
+}
+
+.church-navbar.transparent-navbar.scrolled {
+    background-color: #240B05 !important;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15) !important;
+}
+
+.church-navbar.transparent-navbar.scrolled .navbar-brand,
+.church-navbar.transparent-navbar.scrolled .navbar-brand *,
+.church-navbar.transparent-navbar.scrolled .nav-link,
+.church-navbar.transparent-navbar.scrolled .church-donate-btn {
+    color: #FFFFFF !important;
+}
+
+.transparent-navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: auto;
+    z-index: 1000;
+
+    background: transparent !important;
+    box-shadow: none !important;
+
+    transition: background-color 0.4s ease,
+                box-shadow 0.4s ease;
+}
+
+
+.transparent-navbar.scrolled {
+    background: #6b1f2a !important;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+
+    transition: background-color 0.4s ease,
+                box-shadow 0.4s ease;
+}
+
+
+.church-navbar.transparent-navbar.scrolled {
+    background-color: #240B05 !important;
+}
+
+.church-navbar.transparent-navbar.scrolled .navbar-brand,
+.church-navbar.transparent-navbar.scrolled .navbar-brand *,
+.church-navbar.transparent-navbar.scrolled .nav-link,
+.church-navbar.transparent-navbar.scrolled .church-donate-btn {
+    color: #FFFFFF !important;
+}
+
+.church-navbar.transparent-navbar {
+    background-color: #F5EFE3 !important;
+    box-shadow: none !important;
+}
+
+.church-navbar.transparent-navbar .navbar-brand,
+.church-navbar.transparent-navbar .navbar-brand strong,
+.church-navbar.transparent-navbar .navbar-brand small,
+.church-navbar.transparent-navbar .nav-link,
+.church-navbar.transparent-navbar .church-donate-btn {
+    color: #240B05 !important;
+}
+
+.church-navbar.transparent-navbar.scrolled {
+    background-color: #240B05 !important;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15) !important;
+}
+
+.church-navbar.transparent-navbar.scrolled .navbar-brand,
+.church-navbar.transparent-navbar.scrolled .navbar-brand strong,
+.church-navbar.transparent-navbar.scrolled .navbar-brand small,
+.church-navbar.transparent-navbar.scrolled .nav-link,
+.church-navbar.transparent-navbar.scrolled .church-donate-btn {
+    color: #FFFFFF !important;
+}
+
+.church-navbar .nav-item.dropdown > .nav-link::after {
+    border-top-color: transparent !important;
+}
+
+.church-navbar .nav-item.dropdown > .nav-link::before {
+    display: none !important;
+}
+
+.church-navbar.transparent-navbar {
+    background-color: #F5EFE3 !important;
+    background-image: none !important;
+    box-shadow: none !important;
+    z-index: 1000;
+}
+
+.church-navbar.transparent-navbar .navbar-brand,
+.church-navbar.transparent-navbar .navbar-brand strong,
+.church-navbar.transparent-navbar .navbar-brand small,
+.church-navbar.transparent-navbar .nav-link,
+.church-navbar.transparent-navbar .church-donate-btn {
+    color: #240B05 !important;
+}
+
+.church-navbar.transparent-navbar.scrolled {
+    background-color: #240B05 !important;
+    background-image: none !important;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15) !important;
+}
+
+.church-navbar.transparent-navbar.scrolled .navbar-brand,
+.church-navbar.transparent-navbar.scrolled .navbar-brand strong,
+.church-navbar.transparent-navbar.scrolled .navbar-brand small,
+.church-navbar.transparent-navbar.scrolled .nav-link,
+.church-navbar.transparent-navbar.scrolled .church-donate-btn {
+    color: #FFFFFF !important;
+}
+
+.under-construction {
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 50px 20px;
+    background: transparent;
+}
+
+.under-construction img {
+    width: 100%;
+    max-width: 900px;
+    height: auto;
+    display: block;
+    margin: 0 auto 25px;
+    border-radius: 12px;
+}
+
+.under-construction h1 {
+    color: #240B05;
+    font-size: 36px;
+    margin: 0 0 12px;
+}
+
+.under-construction p {
+    color: #555;
+    font-size: 18px;
+    margin: 0 0 25px;
+}
+
+.back-home {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 12px 28px;
+    background: #240B05;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.back-home:hover {
+    background: #3a120a;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+    .under-construction {
+        padding: 30px 15px;
+        min-height: 70vh;
+    }
+
+    .under-construction img {
+        width: 100%;
+        max-width: 100%;
+        margin-bottom: 20px;
+        border-radius: 8px;
+    }
+
+    .under-construction h1 {
+        font-size: 28px;
+    }
+
+    .under-construction p {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+    .back-home {
+        padding: 10px 20px;
+        font-size: 15px;
+    }
+}
+
+```css
+/* Under Construction Page - Fit Everything in One Screen */
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.under-construction {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.under-construction img {
+    max-width: 80%;
+    max-height: 65vh;
+    object-fit: contain;
+}
+
+.back-home {
+    margin-top: 15px;
+    text-decoration: none;
+}
+
+.simple-footer {
+    flex-shrink: 0;
+}
+```
